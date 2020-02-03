@@ -18,7 +18,7 @@ var role3;
 // This function is run once whenever the bot is started, use it to set the playing game on the bots profile
 client.on("ready", () => {
 
-    client.user.setActivity(config.playingGame, { type: "WATCHING" });
+    client.user.setActivity(config.playingGame);
 
     console.log(`Bot Activated! Logged in as: ${client.user.tag}`);
     console.log("You are running version: " + config.botVersion + " of the ExplorationBot");
@@ -609,7 +609,7 @@ client.on("message", (message) => {
                 sql.run(`UPDATE scores SET isVerifyAdvance = ${row.isVerifyAdvance} - ${row.isVerifyAdvance}`);
 
 
-                // TODO FIX THIS 
+                // TODO FIX THIS ABSOLUTE SHITE
                 // Make this a function or SOMETHING. blegh
                 sql.get(`SELECT * FROM scores WHERE userId = ${row.advancedChallengerId}`).then(row => {
                     if (!row) {
@@ -708,7 +708,7 @@ client.on("message", (message) => {
                 sql.run(`UPDATE scores SET isVerifyClassic = ${row.isVerifyClassic} - ${row.isVerifyClassic}`);
                 
 
-                // TODO FIX THIS 
+                // TODO FIX THIS ABSOLUTE SHITE
                 // Make this a funciton or SOMETHING. blegh
                 sql.get(`SELECT * FROM scores WHERE userId = ${row.classicChallengerId}`).then(row => {
                     if (!row) {
@@ -1072,24 +1072,6 @@ client.on("message", (message) => {
 });
 
 
-// BLP to PNG
-client.on("message", (message) => {
-    if (message.channel.type === "dm") return;
-    if (message.author.bot) return;
-
-    if (message.content.startsWith(config.prefix + "send")) {
-
-        message.channel.send({
-            files:
-                [{
-                    attachment: 'trustedusers.json',
-                    name: 'file.json'
-                }]
-        })
-
-    };
-
-});
 
 
 

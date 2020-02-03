@@ -1,0 +1,4 @@
+{
+  
+  "defaultSQLCreate": "CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, rank INTEGER, name TEXT, advanceLock INTEGER, setAdvance TEXT, setAdvanceId TEXT, isVerifyAdvance INTEGER, advancedChallenger TEXT, advancedChallengerId TEXT, beginnerLock INTEGER, setBeginner TEXT, setBeginnerId TEXT, isVerifyBeginner INTEGER, beginnerChallenger TEXT, beginnerChallengerId TEXT, extremeLock INTEGER, setExtreme TEXT, setExtremeId TEXT, isVerifyExtreme INTEGER, extremeChallenger TEXT, extremeChallengerId TEXT, ClassicLock INTEGER, setClassic TEXT, setClassicId TEXT, isVerifyClassic INTEGER, classicChallenger TEXT, classicChallengerId TEXT)"
+}
