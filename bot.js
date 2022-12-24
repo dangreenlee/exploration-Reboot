@@ -1,7 +1,7 @@
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('./score.sqlite');
-const config = require("./config3.json");
-const secret = require("./secret.json");
+const config = require("./config.json");
+// const secret = require("./secret.json");
 //const secret = require("./secret2.json");
 const fs = require('fs');
 
@@ -996,5 +996,5 @@ if(message.customId === 'decline_button_classic_extreme'){
 
 
 
-//Client login token
-client.login(secret.token);
+//Client login token from ENV
+client.login(process.env.TOKEN);
